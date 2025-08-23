@@ -1,4 +1,6 @@
-package planner;
+package bestPlanSearcher;
+
+import bestPlanSearcher.planner.RodPlan;
 
 import java.util.ArrayList;
 import java.util.Collections;
