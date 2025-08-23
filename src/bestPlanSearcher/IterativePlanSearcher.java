@@ -5,12 +5,12 @@ import bestPlanSearcher.planner.Planner;
 
 import java.util.Optional;
 
-public class IterativePlanner implements BestPlanSearcher {
-    private final Planner algorithm;
+public class IterativePlanSearcher implements BestPlanSearcher {
+    private final Planner planner;
     private final PermutationSetGenerator permutationSetGenerator;
 
-    public IterativePlanner(Planner algorithm, PermutationSetGenerator permutationSetGenerator) {
-        this.algorithm = algorithm;
+    public IterativePlanSearcher(Planner planner, PermutationSetGenerator permutationSetGenerator) {
+        this.planner = planner;
         this.permutationSetGenerator = permutationSetGenerator;
     }
 
@@ -19,7 +19,7 @@ public class IterativePlanner implements BestPlanSearcher {
 
         for(var permutation:permutationSetGenerator.getPermutationSet())
         {
-            var plan = algorithm.planFor(permutation);
+            var plan = planner.planFor(permutation);
             if (bestPlan.isEmpty() || bestPlan.get().getRodsAmount() > plan.getRodsAmount()) {
                 bestPlan = Optional.of(plan);
             }
