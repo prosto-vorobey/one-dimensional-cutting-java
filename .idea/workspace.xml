@@ -4,19 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/DescendingPermutationGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/PermutationGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="feat: add permutation generators&#10;&#10;Added PermutationGenerator interface and its implementations:&#10;- DescendingPermutationGenerator for descending order by length&#10;- BreakRandomPermutationGenerator for mixed ordered/random permutations starting from some position">
+      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakPermutationSetGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/RandomPermutationSetGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/utils/MathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OneDimensionalCutting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OneDimensionalCutting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,6 +33,9 @@
   "associatedIndex": 0
 }]]></component>
   <component name="ProjectId" id="31h9nBzAOxR1SWlV6ev84x9MYbX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -47,6 +57,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="bestPlanSearcher.permutationGenerator" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -62,11 +77,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755965602507</updated>
-      <workItem from="1755965604410" duration="802000" />
+      <workItem from="1755965604410" duration="10223000" />
     </task>
+    <task id="LOCAL-00001" summary="fix: rebuild project configuration">
+      <option name="closed" value="true" />
+      <created>1755966596373</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755966596373</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: add permutation generators&#10;&#10;Added PermutationGenerator interface and its implementations:&#10;- DescendingPermutationGenerator for descending order by length&#10;- BreakRandomPermutationGenerator for mixed ordered/random permutations starting from some position">
+      <option name="closed" value="true" />
+      <created>1755966876344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1755966876344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix: rebuild project configuration" />
+    <MESSAGE value="feat: add permutation generators&#10;&#10;Added PermutationGenerator interface and its implementations:&#10;- DescendingPermutationGenerator for descending order by length&#10;- BreakRandomPermutationGenerator for mixed ordered/random permutations starting from some position" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add permutation generators&#10;&#10;Added PermutationGenerator interface and its implementations:&#10;- DescendingPermutationGenerator for descending order by length&#10;- BreakRandomPermutationGenerator for mixed ordered/random permutations starting from some position" />
   </component>
 </project>

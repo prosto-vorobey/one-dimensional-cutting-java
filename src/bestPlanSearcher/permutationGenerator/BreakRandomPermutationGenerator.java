@@ -9,13 +9,14 @@ public class BreakRandomPermutationGenerator implements PermutationGenerator {
     private final int breakPosition;
     private final Random random;
 
-    public BreakRandomPermutationGenerator(Set<Blank> blanks, double breakScale) {
+    public BreakRandomPermutationGenerator(Set<Blank> blanks, float breakScale) {
         if (breakScale < 0) {
             throw new IllegalArgumentException("breakScale must be >= 0");
         }
         else if (breakScale > 1) {
             throw new IllegalArgumentException("breakScale must be <= 1");
         }
+
         this.blanks = Set.copyOf(blanks);
         breakPosition = (int) Math.floor(blanks.size() * breakScale);
         random = new Random();
@@ -25,6 +26,7 @@ public class BreakRandomPermutationGenerator implements PermutationGenerator {
     public List<Blank> getPermutation() {
         var result = new DescendingPermutationGenerator(blanks).getPermutation();
         sortPartAfterBreak(result);
+
         return result;
     }
 
