@@ -1,12 +1,12 @@
 package task;
 
-import java.util.List;
+import java.util.Set;
 
-public record TaskData(int rodLength, List<Blank> blanks) {
+public record TaskData(int rodLength, Set<Blank> blanks) {
 
-    public TaskData(int rodLength, List<Blank> blanks) {
+    public TaskData(int rodLength, Set<Blank> blanks) {
         this.rodLength = rodLength;
-        this.blanks = List.copyOf(blanks);
+        this.blanks = Set.copyOf(blanks);
     }
 
     public int blankAmount() {
