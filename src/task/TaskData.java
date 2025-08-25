@@ -3,10 +3,8 @@ package task;
 import java.util.Set;
 
 public record TaskData(int rodLength, Set<Blank> blanks) {
-
-    public TaskData(int rodLength, Set<Blank> blanks) {
-        this.rodLength = rodLength;
-        this.blanks = Set.copyOf(blanks);
+    public TaskData {
+        blanks = Set.copyOf(blanks);
     }
 
     public int blankAmount() {
