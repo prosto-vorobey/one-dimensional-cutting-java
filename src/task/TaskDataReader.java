@@ -45,7 +45,7 @@ public class TaskDataReader {
     }
 
     private int[] parseContent(String content) {
-        return Arrays.stream(content.trim().split(" "))
+        return Arrays.stream(content.trim().split("\\s"))
                 .mapToInt(Integer::parseInt)
                 .toArray();
     }
