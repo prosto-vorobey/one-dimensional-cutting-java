@@ -14,7 +14,7 @@ public class GreedyAlgorithm implements Planner {
     }
 
     @Override
-    public CuttingPlan planFor(List<Blank> blanks) {
+    public CuttingPlan generatePlan(List<Blank> blanks) {
         var plan = new ArrayList<RodPlan>();
 
         for(var blank : blanks) {

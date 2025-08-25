@@ -6,5 +6,5 @@ import task.Blank;
 import java.util.List;
 
 public interface Planner {
-    CuttingPlan planFor(List<Blank> blanks);
+    CuttingPlan generatePlan(List<Blank> blanks);
 }
