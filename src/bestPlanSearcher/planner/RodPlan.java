@@ -18,6 +18,7 @@ public class RodPlan{
     public RodPlan(int length, Blank blank) {
         this(length);
         this.blanks.add(blank);
+        this.remainingLength -= blank.length();
     }
 
     public int getRemainingLength() {
