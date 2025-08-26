@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="feat: add implements for PermutationSetGenerator&#10;&#10;Added:&#10;- RandomPermutationSetGenerator for create set of permutation with random order&#10;- BreakRandomPermutationSetGenerator for create set of permutation by BreakRandomPermutationGenerator with different break scale">
-      <change afterPath="$PROJECT_DIR$/src/task/TaskDataReader.java" afterDir="false" />
+    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="refactor(task): replace split content by spaces with split by any separating characters in parseContent in TaskDataReader">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/OneDimensionalCutting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/TaskDataReaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/helper/TestDataHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_01_n10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_02_n10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_03_n100.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_04_n101.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_05_n101.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_06_n1002.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_07_n1001.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_08_n1001.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_09_n1000.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/resources/task_1_10_n1000.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OneDimensionalCutting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OneDimensionalCutting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task/TaskData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task/TaskData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/one-dimensional-cutting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/one-dimensional-cutting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OneDimensionalCutting.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +39,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="31h9nBzAOxR1SWlV6ev84x9MYbX" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -41,7 +54,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.OneDimensionalCutting.executor": "Debug",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.MyTest.executor": "Run",
+    "JUnit.MyTest.shouldReadAsyncAllFilesFromResources.executor": "Debug",
+    "JUnit.MyTest.test.executor": "Debug",
+    "JUnit.TaskDataReaderTest.executor": "Debug",
+    "JUnit.TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -52,6 +74,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -59,6 +84,63 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="bestPlanSearcher.permutationGenerator" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Медиа\Работа\Поиск работы\one-dimensional-cutting\src\resources" />
+      <recent name="D:\Медиа\Работа\Поиск работы\one-dimensional-cutting\src" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TaskDataReaderTest">
+    <configuration name="TaskDataReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskDataReaderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskDataReaderTest" />
+      <option name="METHOD_NAME" value="readAsync_shouldReturnCorrectNumberOfTaskData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskDataReaderTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TaskDataReaderTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TaskDataReaderTest" />
+        <item itemvalue="JUnit.TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData" />
+        <item itemvalue="JUnit.TaskDataReaderTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -75,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755965602507</updated>
-      <workItem from="1755965604410" duration="22217000" />
+      <workItem from="1755965604410" duration="54281000" />
     </task>
     <task id="LOCAL-00001" summary="fix: rebuild project configuration">
       <option name="closed" value="true" />
@@ -101,7 +183,55 @@
       <option name="project" value="LOCAL" />
       <updated>1756030417240</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: add TaskDataReader with async reading of TaskData from files">
+      <option name="closed" value="true" />
+      <created>1756055608478</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756055608478</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: change readAsync return type to CompletableFuture">
+      <option name="closed" value="true" />
+      <created>1756118745330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1756118745330</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor(planner): rename planFor to generatePlan">
+      <option name="closed" value="true" />
+      <created>1756119906092</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1756119906092</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor(bestPlanSearcher): rewrite searchBest using streams">
+      <option name="closed" value="true" />
+      <created>1756119925610</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1756119925610</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor(task): shorten constructor">
+      <option name="closed" value="true" />
+      <created>1756119937276</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1756119937276</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor(task): replace split content by spaces with split by any separating characters in parseContent in TaskDataReader">
+      <option name="closed" value="true" />
+      <created>1756130450007</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1756130450007</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +252,29 @@
     <MESSAGE value="fix: rebuild project configuration" />
     <MESSAGE value="feat: add permutation generators&#10;&#10;Added PermutationGenerator interface and its implementations:&#10;- DescendingPermutationGenerator for descending order by length&#10;- BreakRandomPermutationGenerator for mixed ordered/random permutations starting from some position" />
     <MESSAGE value="feat: add implements for PermutationSetGenerator&#10;&#10;Added:&#10;- RandomPermutationSetGenerator for create set of permutation with random order&#10;- BreakRandomPermutationSetGenerator for create set of permutation by BreakRandomPermutationGenerator with different break scale" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add implements for PermutationSetGenerator&#10;&#10;Added:&#10;- RandomPermutationSetGenerator for create set of permutation with random order&#10;- BreakRandomPermutationSetGenerator for create set of permutation by BreakRandomPermutationGenerator with different break scale" />
+    <MESSAGE value="feat: add TaskDataReader with async reading of TaskData from files" />
+    <MESSAGE value="feat: change readAsync return type to CompletableFuture" />
+    <MESSAGE value="refactor(planner): rename planFor to generatePlan" />
+    <MESSAGE value="refactor(bestPlanSearcher): rewrite searchBest in IterativePlanSearcher using streams" />
+    <MESSAGE value="refactor(task): shorten constructor" />
+    <MESSAGE value="refactor(task): replace split content by spaces with split by any separating characters in parseContent in TaskDataReader" />
+    <MESSAGE value="refactor(bestPlanSearcher): rewrite searchBest in IterativePlanSearcher using streams" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor(bestPlanSearcher): rewrite searchBest in IterativePlanSearcher using streams" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/TaskDataReaderTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/test/TaskDataReaderTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
