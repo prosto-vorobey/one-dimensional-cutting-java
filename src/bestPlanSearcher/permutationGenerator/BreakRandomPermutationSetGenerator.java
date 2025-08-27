@@ -22,12 +22,12 @@ public class BreakRandomPermutationSetGenerator implements PermutationSetGenerat
     @Override
     public Set<List<Blank>> getPermutationSet() {
         var result = new HashSet<List<Blank>>();
-        var counter = 0;
+        var counter = stepCount - 1;
 
-        while (counter < stepCount) {
-            var breakScale = counter / (float)(stepCount - 1);
+        while (counter >= 0) {
+            var breakScale = counter / (float)(stepCount);
             if (result.add(generatePermutation(breakScale))) {
-                counter++;
+                counter--;
             }
         }
 
