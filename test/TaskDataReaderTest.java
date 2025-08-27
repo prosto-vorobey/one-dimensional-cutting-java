@@ -5,7 +5,6 @@ import task.TaskDataReader;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -16,7 +15,7 @@ public class TaskDataReaderTest {
     @BeforeAll
     public static void initFilePaths() {
         filePaths = TestDataHelper.findTxtFilesInResources();
-        executor = Executors.newFixedThreadPool(Math.min(filePaths.size(), 10));
+        executor = TestDataHelper.createExecutor(filePaths.size(), 10);
     }
 
     @Test

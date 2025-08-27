@@ -12,15 +12,20 @@ import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Stream;
 
 public final class TestDataHelper {
     private TestDataHelper() {}
 
-    public static List<TaskData> readTaskData() {
+    public static List<TaskData> readTaskDataFromResources() {
         try {
-            return new TaskDataReader(Executors.newCachedThreadPool()).readAsync(findTxtFilesInResources()).get();
+            var filePaths = findTxtFilesInResources();
+            var executor = createExecutor(filePaths.size(), 10);
+            var result = new TaskDataReader(executor).readAsync(findTxtFilesInResources()).get();
+            executor.shutdown();
+            return result;
         } catch (InterruptedException | ExecutionException e) {
             throw new RuntimeException(e);
         }
@@ -44,5 +49,9 @@ public final class TestDataHelper {
         } catch (URISyntaxException | IOException e) {
             throw new RuntimeException("Error accessing resources", e);
         }
+    }
+
+    public static ExecutorService createExecutor(int countThreads, int maxThreads) {
+        return Executors.newFixedThreadPool(Math.min(countThreads, maxThreads));
     }
 }
