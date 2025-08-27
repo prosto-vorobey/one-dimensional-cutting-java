@@ -14,7 +14,7 @@ public class IterativePlanSearcher implements BestPlanSearcher {
         this.permutationSetGenerator = permutationSetGenerator;
     }
 
-    public CuttingPlan searchBest() {
+    public CuttingPlan findBest() {
         return permutationSetGenerator.getPermutationSet().parallelStream()
                 .map(planner::generatePlan)
                 .min(Comparator.comparing(CuttingPlan::getRodsAmount))
