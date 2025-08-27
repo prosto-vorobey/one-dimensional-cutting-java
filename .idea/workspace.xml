@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="fix: correct processing of large number of steps in set permutation generators&#10;&#10;Previously, when checking for max count of permutation, factorial was calculated for any set size. When calculating big factorials, type overflow happened and return value was 0. This caused errors.&#10;&#10;The issue has been fixed by limiting factorial value to max value of Integer.">
+    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="feat: add toString implementations and final modifiers to multiple classes&#10;&#10;- Added explicit toString() implementations to improve debugging and logging in tests&#10;- Made immutable classes final to prevent inheritance where not intended">
+      <change afterPath="$PROJECT_DIR$/test/BestPlanSearchersDeviationScaleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/BasePlanSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/BasePlanSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/IterativePlanSearcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/IterativePlanSearcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationSetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationSetGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/DescendingPermutationGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/DescendingPermutationGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/RandomPermutationSetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/RandomPermutationSetGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/planner/GreedyAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/planner/GreedyAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/planner/RodPlanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/planner/RodPlanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/BestPlanSearchersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/BestPlanSearchersWorkTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +42,14 @@
     "Application.OneDimensionalCutting.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "true",
     "JUnit.All in one-dimensional-cutting.executor": "Run",
+    "JUnit.BestPlanSearchersDeviationScale.bestPlanSearcher_shouldHavePossibleDeviation.executor": "Run",
+    "JUnit.BestPlanSearchersDeviationScale.executor": "Run",
+    "JUnit.BestPlanSearchersDeviationScaleTest.executor": "Run",
+    "JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldBeWithinPossibleDeviation.executor": "Run",
     "JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount.executor": "Run",
+    "JUnit.BestPlanSearchersTest.executor": "Run",
     "JUnit.BestPlanSearchersTest.test.executor": "Run",
+    "JUnit.BestPlanSearchersWorkTest.executor": "Run",
     "JUnit.MyTest.executor": "Run",
     "JUnit.MyTest.shouldReadAsyncAllFilesFromResources.executor": "Debug",
     "JUnit.MyTest.test.executor": "Debug",
@@ -70,7 +70,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
@@ -89,55 +89,50 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount">
-    <configuration name="All in one-dimensional-cutting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BestPlanSearchersDeviationScaleTest">
+    <configuration name="BestPlanSearchersDeviationScaleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="one-dimensional-cutting" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="one-dimensional-cutting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersTest" />
-      <option name="METHOD_NAME" value="bestPlanSearcher_shouldNotLessOptimalRodsAmount(bestPlanSearcher.BestPlanSearcher,int,org.junit.jupiter.api.TestReporter)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BestPlanSearchersTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="one-dimensional-cutting" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersTest" />
-      <option name="METHOD_NAME" value="test(task.TaskData,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TaskDataReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="one-dimensional-cutting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaskDataReaderTest" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersDeviationScaleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BestPlanSearchersDeviationScaleTest.bestPlanSearcher_shouldHavePossibleDeviation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="one-dimensional-cutting" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TaskDataReaderTest" />
-      <option name="METHOD_NAME" value="readAsync_shouldReturnCorrectNumberOfTaskData" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersDeviationScaleTest" />
+      <option name="METHOD_NAME" value="bestPlanSearcher_shouldHavePossibleDeviation(java.lang.String,org.junit.jupiter.api.TestReporter)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestPlanSearchersWorkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersWorkTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestPlanSearchersWorkTest.bestPlanSearcher_shouldBeWithinPossibleDeviation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersWorkTest" />
+      <option name="METHOD_NAME" value="bestPlanSearcher_shouldBeWithinPossibleDeviation(bestPlanSearcher.BestPlanSearcher)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestPlanSearchersWorkTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersWorkTest" />
+      <option name="METHOD_NAME" value="bestPlanSearcher_shouldNotLessOptimalRodsAmount(bestPlanSearcher.BestPlanSearcher,int,org.junit.jupiter.api.TestReporter)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" />
-        <item itemvalue="JUnit.All in one-dimensional-cutting" />
-        <item itemvalue="JUnit.BestPlanSearchersTest.test" />
-        <item itemvalue="JUnit.TaskDataReaderTest" />
-        <item itemvalue="JUnit.TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData" />
+        <item itemvalue="JUnit.BestPlanSearchersDeviationScaleTest" />
+        <item itemvalue="JUnit.BestPlanSearchersDeviationScaleTest.bestPlanSearcher_shouldHavePossibleDeviation" />
+        <item itemvalue="JUnit.BestPlanSearchersWorkTest" />
+        <item itemvalue="JUnit.BestPlanSearchersWorkTest.bestPlanSearcher_shouldBeWithinPossibleDeviation" />
+        <item itemvalue="JUnit.BestPlanSearchersWorkTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755965602507</updated>
-      <workItem from="1755965604410" duration="79434000" />
+      <workItem from="1755965604410" duration="97039000" />
     </task>
     <task id="LOCAL-00001" summary="fix: rebuild project configuration">
       <option name="closed" value="true" />
@@ -306,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756290980299</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feat: add toString implementations and final modifiers to multiple classes&#10;&#10;- Added explicit toString() implementations to improve debugging and logging in tests&#10;- Made immutable classes final to prevent inheritance where not intended">
+      <option name="closed" value="true" />
+      <created>1756293354647</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1756293354647</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +346,8 @@
     <MESSAGE value="feat(bestPlanSearcher): implemented basic searcher and factory of searchers for best solution&#10;&#10;- Added BasePlanSearcher class implementing the BestPlanSearcher interface. Provides basic functionality for plan searching using planner and permutation generator.&#10;&#10;- Added BestPlanSearcherFactory class for creating different searcher variants with factory methods:&#10;    - createBaseSearcher: create BasePlanSearcher with different PermutationGenerator&#10;    - createIterativeSearcher: create IterativePlanSearcher with different PermutationSetGenerator" />
     <MESSAGE value="test: add tests to check correct work of best plan searchers and added shutdown for executors&#10;&#10;Added BestPlanSearchersTest with test methods:&#10;- greedyWithDescendingPermutation_shouldReturnExpectedRodsAmount: generate best plan using a greedy algorithm with permutation to descending length of blank and equals rod amount of best plan with reference value for each TaskData&#10;- bestPlanSearcher_shouldNotLessOptimalRodsAmount: generate best plan using searcher and checks that rod amount of best plan doesn't exceed optimal value for each TaskData" />
     <MESSAGE value="fix: correct processing of large number of steps in set permutation generators&#10;&#10;Previously, when checking for max count of permutation, factorial was calculated for any set size. When calculating big factorials, type overflow happened and return value was 0. This caused errors.&#10;&#10;The issue has been fixed by limiting factorial value to max value of Integer." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: correct processing of large number of steps in set permutation generators&#10;&#10;Previously, when checking for max count of permutation, factorial was calculated for any set size. When calculating big factorials, type overflow happened and return value was 0. This caused errors.&#10;&#10;The issue has been fixed by limiting factorial value to max value of Integer." />
+    <MESSAGE value="feat: add toString implementations and final modifiers to multiple classes&#10;&#10;- Added explicit toString() implementations to improve debugging and logging in tests&#10;- Made immutable classes final to prevent inheritance where not intended" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add toString implementations and final modifiers to multiple classes&#10;&#10;- Added explicit toString() implementations to improve debugging and logging in tests&#10;- Made immutable classes final to prevent inheritance where not intended" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

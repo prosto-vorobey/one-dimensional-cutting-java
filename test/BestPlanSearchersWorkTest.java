@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class BestPlanSearchersTest {
+public class BestPlanSearchersWorkTest {
     private static final List<Integer> GREEDY_DESCENDING_RESULTS
             = List.of(5, 5, 30, 30, 30, 352, 357, 353, 354, 352);
     private static final List<Integer> OPTIMAL_RESULTS = List.of(4, 4, 28, 28, 28, 341, 346, 341, 342, 341);
@@ -54,7 +54,8 @@ public class BestPlanSearchersTest {
 
     @ParameterizedTest
     @MethodSource("provideBestPlanSearcherTestData")
-    public void bestPlanSearcher_shouldNotLessOptimalRodsAmount(BestPlanSearcher searcher, int optimalResult, TestReporter testReporter) {
+    public void bestPlanSearcher_shouldNotLessOptimalRodsAmount(BestPlanSearcher searcher, int optimalResult,
+                                                                TestReporter testReporter) {
         var result = searcher.findBest();
 
         assertTrue(optimalResult <= result.getRodsAmount());
