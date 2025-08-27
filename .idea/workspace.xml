@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="refactor(task): replace split content by spaces with split by any separating characters in parseContent in TaskDataReader">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_jupiter.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/OneDimensionalCutting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/TaskDataReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/helper/TestDataHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_01_n10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_02_n10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_03_n100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_04_n101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_05_n101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_06_n1002.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_07_n1001.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_08_n1001.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_09_n1000.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/resources/task_1_10_n1000.txt" afterDir="false" />
+    <list default="true" id="15af58e7-45c1-4c5e-984b-abdd5b8ac6a7" name="Changes" comment="feat(bestPlanSearcher): implemented basic searcher and factory of searchers for best solution&#10;&#10;- Added BasePlanSearcher class implementing the BestPlanSearcher interface. Provides basic functionality for plan searching using planner and permutation generator.&#10;&#10;- Added BestPlanSearcherFactory class for creating different searcher variants with factory methods:&#10;    - createBaseSearcher: create BasePlanSearcher with different PermutationGenerator&#10;    - createIterativeSearcher: create IterativePlanSearcher with different PermutationSetGenerator">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/one-dimensional-cutting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/one-dimensional-cutting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OneDimensionalCutting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationSetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/BreakRandomPermutationSetGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/RandomPermutationSetGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/RandomPermutationSetGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/utils/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bestPlanSearcher/permutationGenerator/utils/MathUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TaskDataReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/TaskDataReaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/helper/TestDataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/helper/TestDataHelper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +44,8 @@
   "keyToString": {
     "Application.OneDimensionalCutting.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount.executor": "Run",
+    "JUnit.BestPlanSearchersTest.test.executor": "Run",
     "JUnit.MyTest.executor": "Run",
     "JUnit.MyTest.shouldReadAsyncAllFilesFromResources.executor": "Debug",
     "JUnit.MyTest.test.executor": "Debug",
@@ -68,6 +59,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "last_directory_selection": "D:/Медиа/Работа/Поиск работы/one-dimensional-cutting/test",
     "last_opened_file_path": "D:/Медиа/Работа/Поиск работы/one-dimensional-cutting",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -82,6 +74,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="bestPlanSearcher" />
       <recent name="bestPlanSearcher.permutationGenerator" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -92,7 +85,27 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TaskDataReaderTest">
+  <component name="RunManager" selected="JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount">
+    <configuration name="BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersTest" />
+      <option name="METHOD_NAME" value="bestPlanSearcher_shouldNotLessOptimalRodsAmount(bestPlanSearcher.BestPlanSearcher,int,org.junit.jupiter.api.TestReporter)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BestPlanSearchersTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="one-dimensional-cutting" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BestPlanSearchersTest" />
+      <option name="METHOD_NAME" value="test(task.TaskData,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaskDataReaderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="one-dimensional-cutting" />
       <extension name="coverage">
@@ -136,6 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BestPlanSearchersTest.bestPlanSearcher_shouldNotLessOptimalRodsAmount" />
+        <item itemvalue="JUnit.BestPlanSearchersTest.test" />
         <item itemvalue="JUnit.TaskDataReaderTest" />
         <item itemvalue="JUnit.TaskDataReaderTest.readAsync_shouldReturnCorrectNumberOfTaskData" />
         <item itemvalue="JUnit.TaskDataReaderTest.test" />
@@ -157,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1755965602507</updated>
-      <workItem from="1755965604410" duration="54281000" />
+      <workItem from="1755965604410" duration="76987000" />
     </task>
     <task id="LOCAL-00001" summary="fix: rebuild project configuration">
       <option name="closed" value="true" />
@@ -231,7 +246,55 @@
       <option name="project" value="LOCAL" />
       <updated>1756130450007</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="test: add test infrastructure and TaskDataReader test&#10;&#10;- Marked 'test' directory as test resources root&#10;- Added test data files in test/resources&#10;- Created TestDataHelper utility class with file find methods&#10;- Implemented TaskDataReaderTest verifying correct file-to-TaskData mapping">
+      <option name="closed" value="true" />
+      <created>1756227513843</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1756227513843</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: correct remainingLength calculation in RodPlan initialization&#10;&#10;Previously, when initializing RodPlan with a Blank parameter, the remainingLength field did not account for the blank's length. The issue has been fixed.">
+      <option name="closed" value="true" />
+      <created>1756244977356</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756244977356</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: correct creating new permutations in getPermutationSet in BestRandomPermutationSetGenerator&#10;&#10;Previously, when permutations from 0 to stepCount - 1 were created, there was a chance that permutation with counter = stepCount - 2 would equal with set and with counter = stepCount - 1 the cycle would go to infinity.&#10;&#10;The issue has been fixed by passing from stepCount - 1 to 0.">
+      <option name="closed" value="true" />
+      <created>1756284190210</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1756284190210</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat(bestPlanSearcher): implemented basic searcher for best solution and rename searchBest to findBest&#10;&#10;Renamed">
+      <option name="closed" value="true" />
+      <created>1756284593212</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1756284593212</updated>
+    </task>
+    <task id="LOCAL-00014" summary="refactor(bestPlanSearcher): rename searchBest to findBest">
+      <option name="closed" value="true" />
+      <created>1756286607849</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1756286607849</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat(bestPlanSearcher): implemented basic searcher and factory of searchers for best solution&#10;&#10;- Added BasePlanSearcher class implementing the BestPlanSearcher interface. Provides basic functionality for plan searching using planner and permutation generator.&#10;&#10;- Added BestPlanSearcherFactory class for creating different searcher variants with factory methods:&#10;    - createBaseSearcher: create BasePlanSearcher with different PermutationGenerator&#10;    - createIterativeSearcher: create IterativePlanSearcher with different PermutationSetGenerator">
+      <option name="closed" value="true" />
+      <created>1756287239731</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1756287239731</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,22 +322,25 @@
     <MESSAGE value="refactor(task): shorten constructor" />
     <MESSAGE value="refactor(task): replace split content by spaces with split by any separating characters in parseContent in TaskDataReader" />
     <MESSAGE value="refactor(bestPlanSearcher): rewrite searchBest in IterativePlanSearcher using streams" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor(bestPlanSearcher): rewrite searchBest in IterativePlanSearcher using streams" />
+    <MESSAGE value="test: add test infrastructure and TaskDataReader test&#10;&#10;- Marked 'test' directory as test resources root&#10;- Added test data files in test/resources&#10;- Created TestDataHelper utility class with file find methods&#10;- Implemented TaskDataReaderTest verifying correct file-to-TaskData mapping" />
+    <MESSAGE value="fix: correct remainingLength calculation in RodPlan initialization&#10;&#10;Previously, when initializing RodPlan with a Blank parameter, the remainingLength field did not account for the blank's length. The issue has been fixed." />
+    <MESSAGE value="fix: correct creating new permutations in getPermutationSet in BestRandomPermutationSetGenerator&#10;&#10;Previously, when permutations from 0 to stepCount - 1 were created, there was a chance that permutation with counter = stepCount - 2 would equal with set and with counter = stepCount - 1 the cycle would go to infinity.&#10;&#10;The issue has been fixed by passing from stepCount - 1 to 0." />
+    <MESSAGE value="feat(bestPlanSearcher): implemented basic searcher for best solution and rename searchBest to findBest&#10;&#10;Renamed" />
+    <MESSAGE value="feat(bestPlanSearcher): implemented basic searcher for best solution and rename searchBest to findBest&#10;&#10;Renamed searchBest to improve readability" />
+    <MESSAGE value="refactor(bestPlanSearcher): rename searchBest to findBest" />
+    <MESSAGE value="feat(bestPlanSearcher): implemented basic searcher and factory of searchers for best solution&#10;&#10;- Added BasePlanSearcher class implementing the BestPlanSearcher interface. Provides basic functionality for plan searching using planner and permutation generator.&#10;&#10;- Added BestPlanSearcherFactory class for creating different searcher variants with factory methods:&#10;    - createBaseSearcher: create BasePlanSearcher with different PermutationGenerator&#10;    - createIterativeSearcher: create IterativePlanSearcher with different PermutationSetGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(bestPlanSearcher): implemented basic searcher and factory of searchers for best solution&#10;&#10;- Added BasePlanSearcher class implementing the BestPlanSearcher interface. Provides basic functionality for plan searching using planner and permutation generator.&#10;&#10;- Added BestPlanSearcherFactory class for creating different searcher variants with factory methods:&#10;    - createBaseSearcher: create BasePlanSearcher with different PermutationGenerator&#10;    - createIterativeSearcher: create IterativePlanSearcher with different PermutationSetGenerator" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/TaskDataReaderTest.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/test/TaskDataReaderTest.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="bestPlanSearcher.IterativePlanSearcher" memberName="permutationSetGenerator" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="optimalResult" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

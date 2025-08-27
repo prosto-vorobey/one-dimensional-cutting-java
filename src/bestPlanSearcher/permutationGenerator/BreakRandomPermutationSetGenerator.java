@@ -14,6 +14,9 @@ public class BreakRandomPermutationSetGenerator implements PermutationSetGenerat
         if (stepCount < 1) {
             throw new IllegalArgumentException("Steps count must be > 1");
         }
+        if (stepCount > set.size()) {
+            throw new IllegalArgumentException("Steps count must be <= set size");
+        }
 
         this.set = set;
         this.stepCount = stepCount;

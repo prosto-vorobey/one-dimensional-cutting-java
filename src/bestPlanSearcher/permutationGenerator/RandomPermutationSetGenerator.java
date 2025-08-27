@@ -14,7 +14,7 @@ public class RandomPermutationSetGenerator implements PermutationSetGenerator {
         if (count < 1) {
             throw new IllegalArgumentException("Count must be > 1");
         }
-        if (count > MathUtils.getFactorial(set.size())) {
+        if (count > MathUtils.getFactorialOrMaxValue(set.size())) {
             throw new IllegalArgumentException("Count must be <= factorial of the set size");
         }
 
