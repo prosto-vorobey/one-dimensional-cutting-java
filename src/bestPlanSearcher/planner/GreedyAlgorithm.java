@@ -6,7 +6,7 @@ import task.Blank;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GreedyAlgorithm implements Planner {
+public final class GreedyAlgorithm implements Planner {
     private final RodPlanFactory rodPlanFactory;
 
     public GreedyAlgorithm(RodPlanFactory rodPlanFactory) {
@@ -23,6 +23,13 @@ public class GreedyAlgorithm implements Planner {
         }
 
         return new CuttingPlan(plan);
+    }
+
+    @Override
+    public String toString() {
+        return "GreedyAlgorithm{" +
+                "rodPlanFactory: " + rodPlanFactory +
+                "}";
     }
 
     private boolean addBlankTo(List<RodPlan> plan, Blank blank) {

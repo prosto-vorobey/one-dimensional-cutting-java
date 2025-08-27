@@ -5,20 +5,20 @@ import task.Blank;
 
 import java.util.*;
 
-public class RandomPermutationSetGenerator implements PermutationSetGenerator {
+public final class RandomPermutationSetGenerator implements PermutationSetGenerator {
     private final int count;
-    private final Set<Blank> set;
+    private final Set<Blank> blanks;
     private final Random random;
 
-    public RandomPermutationSetGenerator(Set<Blank> set, int count) {
+    public RandomPermutationSetGenerator(Set<Blank> blanks, int count) {
         if (count < 1) {
             throw new IllegalArgumentException("Count must be > 1");
         }
-        if (count > MathUtils.getFactorialOrMaxValue(set.size())) {
+        if (count > MathUtils.getFactorialOrMaxValue(blanks.size())) {
             throw new IllegalArgumentException("Count must be <= factorial of the set size");
         }
 
-        this.set = Set.copyOf(set);
+        this.blanks = Set.copyOf(blanks);
         this.count = count;
         this.random = new Random();
     }
@@ -37,8 +37,16 @@ public class RandomPermutationSetGenerator implements PermutationSetGenerator {
         return result;
     }
 
+    @Override
+    public String toString() {
+        return "BreakRandomPermutationGenerator{" +
+                "blanks: " + blanks + ", " +
+                "count: " + count +
+                "}";
+    }
+
     private List<Blank> generatePermutation() {
-        var result = new ArrayList<>(set);
+        var result = new ArrayList<>(blanks);
         Collections.shuffle(result, random);
 
         return result;

@@ -4,7 +4,7 @@ import task.Blank;
 
 import java.util.*;
 
-public class BreakRandomPermutationGenerator implements PermutationGenerator {
+public final class BreakRandomPermutationGenerator implements PermutationGenerator {
     private final Set<Blank> blanks;
     private final int breakPosition;
     private final Random random;
@@ -28,6 +28,14 @@ public class BreakRandomPermutationGenerator implements PermutationGenerator {
         sortPartAfterBreak(result);
 
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "BreakRandomPermutationGenerator{" +
+                "blanks: " + blanks + ", " +
+                "breakPosition: " + breakPosition +
+                "}";
     }
 
     private void sortPartAfterBreak(List<Blank> permutation) {

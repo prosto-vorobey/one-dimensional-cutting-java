@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class DescendingPermutationGenerator implements PermutationGenerator {
+public final class DescendingPermutationGenerator implements PermutationGenerator {
 
     private final Set<Blank> blanks;
 
@@ -19,5 +19,12 @@ public class DescendingPermutationGenerator implements PermutationGenerator {
         return blanks.stream()
                 .sorted(Comparator.comparingInt(Blank::length).reversed())
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public String toString() {
+        return "BreakRandomPermutationGenerator{" +
+                "blanks: " + blanks + ", " +
+                "}";
     }
 }
